@@ -1,0 +1,21 @@
+digraph code {
+	graph [bgcolor=azure fontsize=8 fontname="Courier" splines="ortho"];
+	node [fillcolor=gray style=filled shape=box];
+	edge [arrowhead="normal"];
+	"0x004004f0" -> "0x00400511" [color="green"];
+	"0x004004f0" -> "0x00400505" [color="red"];
+	"0x004004f0" [URL="sym.fib/0x004004f0", fillcolor="palegreen",color="#7f7f7f", fontname="Courier",label="(fcn) sym.fib 109\l  sym.fib (int arg1);\l; var int local_ch @ rbp-0xc\l; var int local_8h @ rbp-0x8\l; var int local_4h @ rbp-0x4\l; arg int arg1 @ rdi\l; CALL XREFS from sym.fib (0x400539, 0x400547)\l; CALL XREF from main (0x4005ea)\l0x004004f0      push rbp\l0x004004f1      mov rbp, rsp\l0x004004f4      sub rsp, 0x10\l0x004004f8      mov dword [local_8h], edi                              ; arg1\l0x004004fb      cmp dword [local_8h], 0\l0x004004ff      jne 0x400511\l"]
+	"0x00400505" -> "0x00400554" [color="blue"];
+	"0x00400505" [URL="sym.fib/0x00400505", fillcolor="white",color="#7f7f7f", fontname="Courier",label="0x00400505      mov dword [local_4h], 0\l0x0040050c      jmp 0x400554\l"]
+	"0x00400511" -> "0x00400525" [color="green"];
+	"0x00400511" -> "0x0040051b" [color="red"];
+	"0x00400511" [URL="sym.fib/0x00400511", fillcolor="white",color="#7f7f7f", fontname="Courier",label="0x00400511      cmp dword [local_8h], 1\l0x00400515      je 0x400525\l"]
+	"0x0040051b" -> "0x00400531" [color="green"];
+	"0x0040051b" -> "0x00400525" [color="red"];
+	"0x0040051b" [URL="sym.fib/0x0040051b", fillcolor="white",color="#7f7f7f", fontname="Courier",label="0x0040051b      cmp dword [local_8h], 2\l0x0040051f      jne 0x400531\l"]
+	"0x00400525" -> "0x00400554" [color="blue"];
+	"0x00400525" [URL="sym.fib/0x00400525", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x400515)\l0x00400525      mov dword [local_4h], 1\l0x0040052c      jmp 0x400554\l"]
+	"0x00400531" -> "0x00400554" [color="blue"];
+	"0x00400531" [URL="sym.fib/0x00400531", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x40051f)\l0x00400531      mov eax, dword [local_8h]\l0x00400534      sub eax, 1\l0x00400537      mov edi, eax\l0x00400539      call sym.fib\l0x0040053e      mov edi, dword [local_8h]\l0x00400541      sub edi, 2\l0x00400544      mov dword [local_ch], eax\l0x00400547      call sym.fib\l0x0040054c      mov edi, dword [local_ch]\l0x0040054f      add edi, eax\l0x00400551      mov dword [local_4h], edi\l"]
+	"0x00400554" [URL="sym.fib/0x00400554", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREFS from sym.fib (0x40050c, 0x40052c)\l0x00400554      mov eax, dword [local_4h]\l0x00400557      add rsp, 0x10\l0x0040055b      pop rbp\l0x0040055c      ret\l"]
+}

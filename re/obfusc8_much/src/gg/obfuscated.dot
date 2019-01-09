@@ -1,0 +1,75 @@
+digraph code {
+	graph [bgcolor=azure fontsize=8 fontname="Courier" splines="ortho"];
+	node [fillcolor=gray style=filled shape=box];
+	edge [arrowhead="normal"];
+	"0x00400680" -> "0x004006a1" [color="green"];
+	"0x00400680" -> "0x00400695" [color="red"];
+	"0x00400680" [URL="sym.fib/0x00400680", fillcolor="palegreen",color="#7f7f7f", fontname="Courier",label="(fcn) sym.fib 518\l  sym.fib (int arg1);\l; var int local_3ch @ rbp-0x3c\l; var int local_38h @ rbp-0x38\l; var int local_30h @ rbp-0x30\l; var int local_2ch @ rbp-0x2c\l; var int local_28h @ rbp-0x28\l; var int local_20h @ rbp-0x20\l; var int local_1ch @ rbp-0x1c\l; var int local_18h @ rbp-0x18\l; var int local_ch @ rbp-0xc\l; var int local_8h @ rbp-0x8\l; var int local_4h @ rbp-0x4\l; arg int arg1 @ rdi\l; CALL XREFS from sym.fib (0x400863, 0x400871)\l; CALL XREF from main (0x4009a8)\l0x00400680      push rbp\l0x00400681      mov rbp, rsp\l0x00400684      sub rsp, 0x40                                          ; '@'\l0x00400688      mov dword [local_8h], edi                              ; arg1\l0x0040068b      cmp dword [local_8h], 0\l0x0040068f      jne 0x4006a1\l"]
+	"0x00400695" -> "0x0040087e" [color="blue"];
+	"0x00400695" [URL="sym.fib/0x00400695", fillcolor="white",color="#7f7f7f", fontname="Courier",label="0x00400695      mov dword [local_4h], 0\l0x0040069c      jmp 0x40087e\l"]
+	"0x004006a1" -> "0x004006b5" [color="green"];
+	"0x004006a1" -> "0x004006ab" [color="red"];
+	"0x004006a1" [URL="sym.fib/0x004006a1", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x40068f)\l0x004006a1      cmp dword [local_8h], 1\l0x004006a5      je 0x4006b5\l"]
+	"0x004006ab" -> "0x004006c1" [color="green"];
+	"0x004006ab" -> "0x004006b5" [color="red"];
+	"0x004006ab" [URL="sym.fib/0x004006ab", fillcolor="white",color="#7f7f7f", fontname="Courier",label="0x004006ab      cmp dword [local_8h], 2\l0x004006af      jne 0x4006c1\l"]
+	"0x004006b5" -> "0x0040087e" [color="blue"];
+	"0x004006b5" [URL="sym.fib/0x004006b5", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x4006a5)\l0x004006b5      mov dword [local_4h], 1\l0x004006bc      jmp 0x40087e\l"]
+	"0x004006c1" -> "0x004006dd" [color="blue"];
+	"0x004006c1" [URL="sym.fib/0x004006c1", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x4006af)\l0x004006c1      mov eax, dword [local_8h]\l0x004006c4      mov rcx, rsp\l0x004006c7      add rcx, 0xfffffffffffffff0\l0x004006cb      mov rsp, rcx\l0x004006ce      mov edx, eax\l0x004006d0      and edx, 1\l0x004006d3      mov dword [local_ch], eax\l0x004006d6      mov qword [local_18h], rcx\l0x004006da      mov dword [local_1ch], edx\l"]
+	"0x004006dd" -> "0x004007ab" [color="green"];
+	"0x004006dd" -> "0x004006e8" [color="red"];
+	"0x004006dd" [URL="sym.fib/0x004006dd", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x4007a6)\l0x004006dd      mov eax, dword [local_1ch]\l0x004006e0      test eax, eax\l0x004006e2      je 0x4007ab\l"]
+	"0x004006e8" -> "0x004006ed" [color="blue"];
+	"0x004006e8" [URL="sym.fib/0x004006e8", fillcolor="white",color="#7f7f7f", fontname="Courier",label="0x004006e8      jmp 0x4006ed\l"]
+	"0x004006ed" -> "0x00400847" [color="green"];
+	"0x004006ed" -> "0x004006fc" [color="red"];
+	"0x004006ed" [URL="sym.fib/0x004006ed", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x4006e8)\l0x004006ed      mov eax, dword [local_1ch]\l0x004006f0      sub eax, 1\l0x004006f3      mov dword [local_20h], eax\l0x004006f6      je 0x400847\l"]
+	"0x004006fc" -> "0x00400701" [color="blue"];
+	"0x004006fc" [URL="sym.fib/0x004006fc", fillcolor="white",color="#7f7f7f", fontname="Courier",label="0x004006fc      jmp 0x400701\l"]
+	"0x00400701" -> "0x00400718" [color="blue"];
+	"0x00400701" [URL="sym.fib/0x00400701", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x4006fc)\l0x00400701      mov rax, rsp\l0x00400704      add rax, 0xfffffffffffffff0\l0x00400708      mov rsp, rax\l0x0040070b      mov ecx, dword [local_ch]\l0x0040070e      and ecx, 1\l0x00400711      mov qword [local_28h], rax\l0x00400715      mov dword [local_2ch], ecx\l"]
+	"0x00400718" -> "0x00400759" [color="green"];
+	"0x00400718" -> "0x00400723" [color="red"];
+	"0x00400718" [URL="sym.fib/0x00400718", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x400754)\l0x00400718      mov eax, dword [local_2ch]\l0x0040071b      test eax, eax\l0x0040071d      je 0x400759\l"]
+	"0x00400723" -> "0x00400728" [color="blue"];
+	"0x00400723" [URL="sym.fib/0x00400723", fillcolor="white",color="#7f7f7f", fontname="Courier",label="0x00400723      jmp 0x400728\l"]
+	"0x00400728" -> "0x00400779" [color="green"];
+	"0x00400728" -> "0x00400737" [color="red"];
+	"0x00400728" [URL="sym.fib/0x00400728", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x400723)\l0x00400728      mov eax, dword [local_2ch]\l0x0040072b      sub eax, 1\l0x0040072e      mov dword [local_30h], eax\l0x00400731      je 0x400779\l"]
+	"0x00400737" -> "0x0040073c" [color="blue"];
+	"0x00400737" [URL="sym.fib/0x00400737", fillcolor="white",color="#7f7f7f", fontname="Courier",label="0x00400737      jmp 0x40073c\l"]
+	"0x0040073c" -> "0x00400718" [color="blue"];
+	"0x0040073c" [URL="sym.fib/0x0040073c", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x400737)\l0x0040073c      mov eax, dword [local_ch]\l0x0040073f      add eax, 0x22b2fbd7\l0x00400744      add eax, 0x29c4ff84\l0x00400749      sub eax, 0x22b2fbd7\l0x0040074e      mov rcx, qword [local_28h]\l0x00400752      mov dword [rcx], eax\l0x00400754      jmp 0x400718\l"]
+	"0x00400759" -> "0x00400791" [color="blue"];
+	"0x00400759" [URL="sym.fib/0x00400759", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x40071d)\l0x00400759      xor eax, eax\l0x0040075b      mov ecx, eax\l0x0040075d      mov edx, dword [local_ch]\l0x00400760      sub ecx, edx\l0x00400762      mov esi, eax\l0x00400764      sub esi, 0x29c4ff84\l0x0040076a      add ecx, esi\l0x0040076c      sub eax, ecx\l0x0040076e      mov rdi, qword [local_28h]\l0x00400772      mov dword [rdi], eax\l0x00400774      jmp 0x400791\l"]
+	"0x00400779" -> "0x00400791" [color="blue"];
+	"0x00400779" [URL="sym.fib/0x00400779", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x400731)\l0x00400779      mov eax, dword [local_ch]\l0x0040077c      add eax, 0x61c3db6c\l0x00400781      add eax, 0x29c4ff84\l0x00400786      sub eax, 0x61c3db6c\l0x0040078b      mov rcx, qword [local_28h]\l0x0040078f      mov dword [rcx], eax\l"]
+	"0x00400791" -> "0x004006dd" [color="blue"];
+	"0x00400791" [URL="sym.fib/0x00400791", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x400774)\l0x00400791      mov rax, qword [local_28h]\l0x00400795      mov ecx, dword [rax]\l0x00400797      sub ecx, 1\l0x0040079a      sub ecx, 0x29c4ff84\l0x004007a0      mov rdx, qword [local_18h]\l0x004007a4      mov dword [rdx], ecx\l0x004007a6      jmp 0x4006dd\l"]
+	"0x004007ab" -> "0x004007b9" [color="blue"];
+	"0x004007ab" [URL="sym.fib/0x004007ab", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x4006e2)\l0x004007ab      mov rax, rsp\l0x004007ae      add rax, 0xfffffffffffffff0\l0x004007b2      mov rsp, rax\l0x004007b5      mov qword [local_38h], rax\l"]
+	"0x004007b9" -> "0x004007f6" [color="green"];
+	"0x004007b9" -> "0x004007c3" [color="red"];
+	"0x004007b9" [URL="sym.fib/0x004007b9", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x4007f1)\l0x004007b9      mov al, 1\l0x004007bb      test al, al\l0x004007bd      jne 0x4007f6\l"]
+	"0x004007c3" -> "0x004007c8" [color="blue"];
+	"0x004007c3" [URL="sym.fib/0x004007c3", fillcolor="white",color="#7f7f7f", fontname="Courier",label="0x004007c3      jmp 0x4007c8\l"]
+	"0x004007c8" -> "0x00400813" [color="green"];
+	"0x004007c8" -> "0x004007d4" [color="red"];
+	"0x004007c8" [URL="sym.fib/0x004007c8", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x4007c3)\l0x004007c8      xor eax, eax\l0x004007ca      mov cl, al\l0x004007cc      test cl, cl\l0x004007ce      jne 0x400813\l"]
+	"0x004007d4" -> "0x004007d9" [color="blue"];
+	"0x004007d4" [URL="sym.fib/0x004007d4", fillcolor="white",color="#7f7f7f", fontname="Courier",label="0x004007d4      jmp 0x4007d9\l"]
+	"0x004007d9" -> "0x004007b9" [color="blue"];
+	"0x004007d9" [URL="sym.fib/0x004007d9", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x4007d4)\l0x004007d9      mov eax, 0x79c89c95\l0x004007de      add eax, 0\l0x004007e1      mov ecx, dword [local_ch]\l0x004007e4      sub eax, ecx\l0x004007e6      sub eax, 0x79c89c95\l0x004007eb      mov rdx, qword [local_38h]\l0x004007ef      mov dword [rdx], eax\l0x004007f1      jmp 0x4007b9\l"]
+	"0x004007f6" -> "0x0040082b" [color="blue"];
+	"0x004007f6" [URL="sym.fib/0x004007f6", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREFS from sym.fib (0x4007bd, 0x400800)\l0x004007f6      xor eax, eax\l0x004007f8      mov ecx, eax\l0x004007fa      sub ecx, 0\l0x004007fd      mov edx, eax\l0x004007ff      mov esi, dword [local_ch]\l0x00400802      sub edx, esi\l0x00400804      sub ecx, edx\l0x00400806      sub eax, ecx\l0x00400808      mov rdi, qword [local_38h]\l0x0040080c      mov dword [rdi], eax\l0x0040080e      jmp 0x40082b\l"]
+	"0x00400813" -> "0x0040082b" [color="blue"];
+	"0x00400813" [URL="sym.fib/0x00400813", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x4007ce)\l0x00400813      mov eax, 0x5f1a319c\l0x00400818      add eax, 0\l0x0040081b      mov ecx, dword [local_ch]\l0x0040081e      sub eax, ecx\l0x00400820      sub eax, 0x5f1a319c\l0x00400825      mov rdx, qword [local_38h]\l0x00400829      mov dword [rdx], eax\l"]
+	"0x0040082b" -> "0x0040085d" [color="blue"];
+	"0x0040082b" [URL="sym.fib/0x0040082b", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x40080e)\l0x0040082b      xor eax, eax\l0x0040082d      mov rcx, qword [local_38h]\l0x00400831      mov edx, dword [rcx]\l0x00400833      mov esi, eax\l0x00400835      sub esi, 1\l0x00400838      sub edx, esi\l0x0040083a      sub eax, edx\l0x0040083c      mov rdi, qword [local_18h]\l0x00400840      mov dword [rdi], eax\l0x00400842      jmp 0x40085d\l"]
+	"0x00400847" -> "0x0040085d" [color="blue"];
+	"0x00400847" [URL="sym.fib/0x00400847", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x4006f6)\l0x00400847      mov eax, dword [local_ch]\l0x0040084a      add eax, 0x50bbbb52\l0x0040084f      sub eax, 1\l0x00400852      sub eax, 0x50bbbb52\l0x00400857      mov rcx, qword [local_18h]\l0x0040085b      mov dword [rcx], eax\l"]
+	"0x0040085d" -> "0x0040087e" [color="blue"];
+	"0x0040085d" [URL="sym.fib/0x0040085d", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREF from sym.fib (0x400842)\l0x0040085d      mov rax, qword [local_18h]\l0x00400861      mov edi, dword [rax]\l0x00400863      call sym.fib\l0x00400868      mov edi, dword [local_8h]\l0x0040086b      sub edi, 2\l0x0040086e      mov dword [local_3ch], eax\l0x00400871      call sym.fib\l0x00400876      mov edi, dword [local_3ch]\l0x00400879      add edi, eax\l0x0040087b      mov dword [local_4h], edi\l"]
+	"0x0040087e" [URL="sym.fib/0x0040087e", fillcolor="white",color="#7f7f7f", fontname="Courier",label="; CODE XREFS from sym.fib (0x40069c, 0x4006bc)\l0x0040087e      mov eax, dword [local_4h]\l0x00400881      mov rsp, rbp\l0x00400884      pop rbp\l0x00400885      ret\l"]
+}
