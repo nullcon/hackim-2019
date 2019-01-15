@@ -1,0 +1,275 @@
+# move to 200, we will store input string at MEM[200]
+sr r0 2
+sr r1 2
+mul r0 r0
+mul r0 r0
+mul r1 r1
+mul r0 r1
+add r0 r0
+mul r1 r1
+add r0 r1
+add r0 r1
+add r0 r1
+add r0 r1
+sr r1 2
+mul r1 r1
+add r0 r1
+add r0 r1
+sr r1 0
+str r1 r0
+
+# check index 0 for 'w'
+chm
+ld r2 r0
+chm
+sr r1 2
+mul r1 r1
+mul r1 r1
+add r1 r1
+add r1 r1
+add r1 r1
+sr r0 2
+add r0 r0
+add r0 r0
+inc r0
+sub r1 r0
+inc r1
+sr r0 2
+add r1 r0
+sub r2 r1
+sr r0 2
+add r2 r0
+inc r2
+chm
+je r2 r0
+hlt
+
+# check index 4 for '1'
+chm
+sr r0 2
+sub r1 r0
+sub r1 r0
+inc r1
+sr r0 0
+chm
+ld r0 r0
+chm
+sr r2 2
+mul r2 r2
+add r0 r2
+chm
+ld r2 r0
+chm
+sr r0 2
+div r1 r0
+add r0 r0
+add r0 r0
+sub r1 r0
+sr r0 2
+sub r1 r0
+sub r1 r0
+sub r2 r0
+sub r1 r0
+sub r2 r0
+inc r1
+sub r2 r1
+inc r2
+sr r0 2
+chm
+je r2 r0
+hlt
+
+# check index 13 for 't'
+chm
+sr r0 1
+sub r2 r0
+sr r0 0
+chm
+ld r0 r0
+chm
+ld r1 r0
+sr r2 2
+add r2 r2
+mul r2 r2
+sr r0 2
+inc r0
+sub r2 r0
+add r2 r1
+chm
+ld r2 r2
+chm
+sr r0 2
+div r1 r0
+sr r0 2
+add r0 r0
+mul r0 r0
+add r1 r0
+sub r2 r1
+sr r0 2
+chm
+je r2 r0
+hlt
+
+#check index 1 for 'h'
+chm
+sr r0 0
+chm
+ld r0 r0
+chm
+ld r1 r0
+inc r0
+chm
+ld r2 r0
+chm
+sr r0 2
+div r1 r0
+add r1 r0
+add r1 r0
+sub r2 r1
+sr r0 2
+chm
+je r2 r0
+hlt
+
+# check index 7 for 'D'
+chm
+sr r0 2
+div r1 r0
+mul r0 r0
+mul r0 r0
+add r1 r0
+sr r2 2
+div r0 r2
+sr r2 1
+sub r0 r2
+ld r2 r0
+sr r0 0
+chm
+ld r0 r0
+chm
+add r2 r0
+chm
+ld r2 r2
+chm
+sub r2 r1
+sr r0 2
+chm
+je r2 r0
+hlt
+
+# check index 3 for 'N'
+chm
+sr r0 2
+inc r0
+chm
+ld r2 r2
+chm
+add r2 r0
+chm
+ld r2 r2
+chm
+sr r0 2
+mul r0 r0
+add r0 r0
+inc r0
+inc r0
+add r1 r0
+sub r2 r1
+sr r0 2
+chm
+je r2 r0
+hlt
+
+# check index 10 for 'k'
+chm
+sr r0 0
+chm
+ld r2 r0
+chm
+sr r0 2
+add r0 r0
+add r0 r0
+inc r0
+inc r0
+add r2 r0
+chm
+ld r2 r2
+chm
+sr r0 2
+mul r0 r0
+mul r0 r0
+add r1 r0
+sr r0 2
+add r0 r0
+add r0 r0
+inc r0
+inc r0
+inc r0
+inc r0
+inc r0
+sub r2 r0
+sub r2 r1
+sr r0 2
+chm
+je r2 r0
+hlt
+
+# check index 5 for 'T'
+chm
+sr r0 0
+chm
+ld r2 r0
+chm
+sr r0 2
+add r0 r0
+inc r0
+add r2 r0
+chm
+ld r2 r2
+chm
+sr r0 2
+add r0 r0
+add r0 r0
+sub r1 r0
+sr r0 2
+add r2 r0
+sub r2 r1
+sr r0 2
+chm
+je r2 r0
+hlt
+
+# check index 11 for '0'
+chm
+sr r0 0
+chm
+ld r2 r0
+chm
+sr r0 2
+add r0 r0
+add r2 r0
+add r2 r0
+add r2 r0
+sr r0 1
+sub r2 r0
+chm
+ld r2 r2
+chm
+sub r1 r2
+sub r2 r1
+sr r0 2
+mul r0 r0
+add r0 r0
+inc r0
+inc r0
+sub r2 r0
+sr r0 2
+chm
+je r2 r0
+hlt
+
+# store flag in mem[1]
+chm
+sr r0 1
+str r0 r0
+hlt

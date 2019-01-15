@@ -1,0 +1,131 @@
+# check mem[1] for 1
+sr r0 1
+chm
+ld r2 r0
+chm
+sub r2 r0
+sr r0 2
+chm
+je r2 r0
+hlt
+
+# check index 6 for 's'
+chm
+sr r0 0
+chm
+ld r2 r0
+chm
+sr r0 2
+add r2 r0
+add r2 r0
+add r2 r0
+chm
+ld r2 r2
+chm
+sr r1 2
+sr r0 2
+mul r0 r0
+mul r0 r0
+sub r2 r0
+inc r2
+mul r1 r1
+mul r1 r1
+add r1 r1
+sr r0 2
+add r0 r0
+mul r0 r0
+add r0 r0
+add r0 r0
+add r1 r0
+sr r0 2
+add r0 r0
+add r1 r0
+sub r2 r1
+sr r0 2
+chm
+je r2 r0
+hlt
+
+# check index 12 for 'u'
+chm
+sr r0 2
+add r0 r0
+sr r2 2
+add r0 r2
+inc r0
+add r1 r0
+sr r0 0
+chm
+ld r2 r0
+chm
+sr r0 2
+add r0 r0
+add r0 r0
+inc r0
+inc r0
+inc r0
+inc r0
+add r2 r0
+chm
+ld r2 r2
+chm
+sr r0 2
+mul r0 r0
+add r0 r0
+inc r0
+inc r0
+sub r2 r0
+sub r2 r1
+sr r0 2
+chm
+je r2 r0
+hlt
+
+# check index 2 for '3'
+chm
+div r1 r0
+sr r2 0
+chm
+ld r2 r2
+chm
+add r2 r0
+chm
+ld r2 r2
+chm
+sr r0 2
+add r2 r0
+sub r2 r1
+sr r0 2
+chm
+je r2 r0
+hlt
+
+# check index 8 for '4'
+chm
+sr r0 0
+chm
+ld r2 r0
+chm
+sr r0 2
+add r0 r0
+add r0 r0
+add r2 r0
+chm
+ld r2 r2
+chm
+inc r2
+sub r2 r1
+sr r0 2
+chm
+je r2 r0
+hlt
+
+# done, set flag
+chm
+sr r0 1
+sr r2 2
+str r2 r0
+sr r0 2
+sr r1 2
+sr r2 2
+hlt
