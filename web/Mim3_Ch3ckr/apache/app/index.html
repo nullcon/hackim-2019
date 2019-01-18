@@ -17,8 +17,8 @@
   <h2>Check Mim3 Typ3</h2>
  <form action="getsize.php" method="POST">
   <div class="form-group">
-    <label for="formGroupExampleInput">Example label</label>
-    <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    
+    <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="/path/to/image">
   </div>
       <div class="mt-3">
       <button type="submit" name="submit" class="btn btn-primary">Submit</button>
@@ -36,7 +36,6 @@
 <div class="container mt-3">
   <h2>Choose a file</h2>
   <form action="upload.php" method="POST" enctype="multipart/form-data">
-    <p>Custom file:</p>
     <div class="custom-file mb-3">
       <input type="file" class="custom-file-input" id="customFile" name="fileToUpload">
       <label class="custom-file-label" for="customFile">Choose file</label>

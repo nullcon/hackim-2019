@@ -1,6 +1,6 @@
 <?php
-error_reporting(-1);
-ini_set('display_errors', 'On');
+//error_reporting(-1);
+//ini_set('display_errors', 'On');
 
 class CurlClass{
     public function httpGet($url) {
@@ -22,6 +22,7 @@ class MainClass {
 
 	public function __destruct() {
         $this->why =new CurlClass;
+        echo $this->url;
         echo $this->why->httpGet($this->url);
 	}
 }

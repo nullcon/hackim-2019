@@ -7,4 +7,3 @@ RUN pip install ebcdic
 #Copy all the files
 COPY ./app /app
 
-EXPOSE 180
