@@ -10,7 +10,7 @@ description: Upload and check your Mim3 type
 - Perform deserialization on MainClass to perform SSRF with curl
 - Docker range - 172.17.0.0/24
 - On 172.17.0.3:180 you would get crypto which is ebcdic with cp1047 encoding (DD & online converters wont work, you need to use py script)
-- Navigate to /fetch~%[]^@)( and then to /flag[]!@~`#$%^*&(). You would get the flag
+- Navigate to /fetch~%[]^@)( and You would get the flag
 
 #Installation
 - Navigate to apache and run start.sh
