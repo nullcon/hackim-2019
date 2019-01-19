@@ -1,3 +1,5 @@
+Flag: `wh3N1TsD4rk0ut`
+
 Reverse the switch cases to figure out which opcode in `chal.o.1` and `chal.o.2` corresponds to which case of the decoder. Each opcode is 32 bits in size. Each instruction contains contains 1 byte which corresponds to a switch case and 2 bytes which correspond to 2 operands.
 
 Other way is to just figure out which one of the cases corresponds to loading the source buffer's index into a vm register for validation. The vm registers are stored in the .bss segment (`r0`, `r1`, `r2` are general purpose registers, `r3` is the instruction pointer and `r4` is a flag which is used to toggle variants of the vm opcodes). All registers are 1 byte large.
@@ -105,6 +107,14 @@ for idx in order:
             max_ins = ins
             done[idx] = c
             break
+```
+
+Output:
+```bash
+vagrant@amy:~/tools/pin-3.7-97619-g0d0c92f4f-gcc-linux/source/tools/rev3al$ python sol.py
+wh3N1TsD4ak0ut
+Found flag:
+hackim19{wh3N1TsD4ak0ut}
 ```
 
 Complete source files are present in the solution directory!
