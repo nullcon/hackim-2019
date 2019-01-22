@@ -1,0 +1,18 @@
+version: "2"
+services:
+  db:
+    container_name: db
+    build: ./mongo
+    volumes:
+      - /data/db
+    ports:
+      - "27017:27017"
+  proto:
+    container_name: proto
+    restart: always
+    build: .
+    ports:
+      - "4545:8080"
+    links:
+      - db
+
