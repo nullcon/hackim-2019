@@ -51,14 +51,16 @@ app.post('/signup', (req, res) =&gt; {
 app.get('/getFlag', (req, res) =&gt; {
 
 
-    var аdmin=JSON.parse(JSON.stringify(req.cookies))
-
-    if(admin.admin==1){
-      res.send("flag{//masked}");
+     var аdmin=JSON.parse(JSON.stringify(req.cookies))
+    
+    if(admin.аdmin==1){
+      delete Object.prototype.аdmin;
+      res.send("hackim19{}");
     }
     else{
       res.send("You are not authorized"); 
     }
+
 
 });
 

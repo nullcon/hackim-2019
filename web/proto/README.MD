@@ -1,6 +1,6 @@
 # name: proto
 
-# flag: flag{Prototype_for_the_win}
+# flag: hackim19{Prototype_for_the_win}
 
 # solution
 - The mongo id should be prediected.

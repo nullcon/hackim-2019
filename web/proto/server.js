@@ -71,18 +71,36 @@ app.get('/getPost',(req,res) => {
   }
   else{
 
-    mongoose.connect(url);
-    var payload={_id:req.query.id}
-    console.log(payload)
-    MyModel.findById(payload,function (err, adventure) {
-     console.log(adventure)
-     if(adventure){
-     res.send(adventure);
-     } 
-     else{
+    var id=req.query.id
+
+    if(id.match("'")){
+      if(id.match("--")){
+        res.json({"_id":"5c46e90eeaca9e86b7fc047a","name":"dummypost3","post":"Follow The White Rabbit!"}) 
+      }
+      res.send("Query failed with error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1")
+    }
+
+    if (id.match(/^[0-9a-fA-F]{24}$/)) {
+      mongoose.connect(url);
+      var payload={_id:id}
+      console.log(payload)
+      MyModel.findById(payload,function (err, adventure) {
+      console.log(adventure)
+      if(adventure){
+       res.send(adventure.post);
+        }   
+      else{
+       res.json({"error":"Not found"});
+      }
+     })
+    }
+
+    else{
       res.json({"error":"Not found"});
-     }
-    })
+    }
+
+
+    
 
   }
 
@@ -107,9 +125,9 @@ app.get('/a94b5f1371229440d01f9de77e667b2d/getFlag', (req, res) => {
 
     var аdmin=JSON.parse(JSON.stringify(req.cookies))
     
-    if(admin.admin==1){
-      delete Object.prototype.admin;
-      res.send("flag{Prototype_for_the_win}");
+    if(admin.аdmin==1){
+      delete Object.prototype.аdmin;
+      res.send("hackim19{Prototype_for_the_win}");
     }
     else{
       res.send("You are not authorized"); 
