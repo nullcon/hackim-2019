@@ -1,0 +1,9 @@
+version: "2"
+services:
+  credz:
+    container_name: credz
+    restart: always
+    build: .
+    ports:
+      - "80:80"
+
