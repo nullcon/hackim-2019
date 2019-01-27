@@ -9,7 +9,7 @@ $uploadOk = 1;
 $imageFileType=substr($_FILES["fileToUpload"]["name"],strrpos($_FILES["fileToUpload"]["name"],'.')+1,strlen($_FILES["fileToUpload"]["name"]));
 
 $file_name = md5(time());
-$file_name =substr($file_name, 0, 10).'.'.$imageFileType;
+$file_name =substr($file_name, 0, 10).'.jpeg';
 
 $target_file=$target_dir.$file_name;
 

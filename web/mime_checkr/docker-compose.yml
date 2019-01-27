@@ -1,0 +1,13 @@
+version: "2"
+services:
+  apache:
+    container_name: apache
+    restart: always
+    build: ./apache
+    ports:
+      - "80:80"
+  crypto:
+    container_name: crypto
+    restart: always
+    build: ./crypto
+
