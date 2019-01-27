@@ -4,7 +4,7 @@ description: Upload and check your Mim3 type
 # flag: hackim19{PHP_Streams_are_t00_MainStream0}
 
 # solution
-- download the backup file of getsize, password of rar is title
+- download the backup file getmime.bak
 - Upload a phar with image header
 - check the mime type with phar://image
 - Perform deserialization on MainClass to perform SSRF with curl
