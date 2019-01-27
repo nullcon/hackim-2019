@@ -1,0 +1,9 @@
+version: "2"
+services:
+  escape:
+    container_name: escape
+    restart: always
+    build: .
+    ports:
+      - "8080:8080"
+
