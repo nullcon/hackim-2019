@@ -26,10 +26,13 @@ Also add your contact details when you get push access
 
 + Hosts
 
-|Domain                 |IP             |
-|-----------------------|---------------|
-|ctf.nullcon.net        |178.128.69.215 |
-|pwn.ctf.nullcon.net    |68.183.88.111  |
+|Domain                 |IP             |User       |
+|-----------------------|---------------|-----------|
+|ctf.nullcon.net        |178.128.69.215 |sudhakar   |
+|pwn.ctf.nullcon.net    |68.183.88.111  |sudhakar   |
+|web1.ctf.nullcon.net   |159.65.158.100 |root       |
+|web2.ctf.nullcon.net   |139.59.94.165  |root       |
+|web3.ctf.nullcon.net   |139.59.41.56   |root       |
 
 + User : `sudhakar`
 + password : shared on telegram
