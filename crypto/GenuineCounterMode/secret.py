@@ -1,4 +1,4 @@
 from Crypto import Random
 
-flag = 'hackim19{this_is_a_temp_flag}'
-key = Random.get_random_bytes(16) # this should be a fixed value on the ctf
+flag = 'hackim19{forb1dd3n_made_e4sy_a7gh12}'
+key = b"\xe2'\xfa\xa4\x0e\xb5\xf9\xbb\\\x1c\x8b\x95\xe4\xcf\x02F"
