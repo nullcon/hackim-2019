@@ -1,0 +1,67 @@
+{
+  "_from": "nodesi",
+  "_id": "nodesi@1.8.0",
+  "_inBundle": false,
+  "_integrity": "sha512-fD0+CWGjwfSScXpQodVMXulMFVUkLDWyG45BiHtByfQuZACXSkwvmRqAK9YKgv40XeTex9qg8CV8cO/+KzZEZg==",
+  "_location": "/nodesi",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "nodesi",
+    "name": "nodesi",
+    "escapedName": "nodesi",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nodesi/-/nodesi-1.8.0.tgz",
+  "_shasum": "b861c04ad1f5cdb25c3c60f7a44e598854a36ca5",
+  "_spec": "nodesi",
+  "_where": "/home/ninja/Desktop/nullcon/escape",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Schibsted-Tech-Polska/nodesi/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "clone": "1.0.3",
+    "good-guy-http": "1.12.0"
+  },
+  "deprecated": false,
+  "description": "ESI: the good parts in node.js",
+  "devDependencies": {
+    "coveralls": "3.0.2",
+    "express": "4.16.2",
+    "hjs": "0.0.6",
+    "istanbul": "0.4.5",
+    "mocha": "5.2.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "homepage": "https://github.com/Schibsted-Tech-Polska/nodesi#readme",
+  "keywords": [
+    "esi",
+    "http",
+    "rest"
+  ],
+  "license": "ISC",
+  "main": "esi.js",
+  "name": "nodesi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schibsted-Tech-Polska/nodesi.git"
+  },
+  "scripts": {
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive --exit",
+    "perf": "node perf.js",
+    "test": "mocha test/*.js --exit",
+    "test:debug": "mocha --inspect-brk test/*.js"
+  },
+  "version": "1.8.0"
+}

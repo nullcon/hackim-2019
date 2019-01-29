@@ -1,0 +1,14 @@
+{
+  "name": "proto_ctf",
+  "version": "1.0.0",
+  "description": "Proto ctf",
+  "author": "N B Sri Harsha <harsha@defmax.io>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "good-guy-http": "^1.12.1"
+  }
+}

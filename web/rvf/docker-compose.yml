@@ -1,0 +1,9 @@
+version: "2"
+services:
+  rfv:
+    container_name: rfv
+    restart: always
+    build: .
+    ports:
+      - "8080:8080"
+
