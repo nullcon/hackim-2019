@@ -11,7 +11,7 @@ var esi = new ESI({
         logTo: process.stdout
     });
 
-const host = "172.22.0.1";
+const host = "172.19.0.1";
 
 const blacklists = ["<!--esi-->","assign","var"];
 
