@@ -8,7 +8,6 @@ var eth0 = networkInterfaces.eth0[0].address;
 
 
 var esi = new ESI({
-		allowedHosts: ['.*'],
         logTo: process.stdout
     });
 

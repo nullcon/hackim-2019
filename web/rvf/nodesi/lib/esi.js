@@ -26,28 +26,20 @@ function ESI(config) {
         findESIInclueTags(html, options)
             .forEach(tag => {
                 const placeholder = '<!-- esi-placeholder-' + i + ' -->';
-                console.log(tag)
-                console.log(maxDepthReached)
+
                 if(maxDepthReached) {
                     html = html.replace(tag, '');
                 } else if(tag.includes('<esi:include')) {
                     html = html.replace(tag, placeholder);
-                    console.log(html)
                     subtasks[i] = getIncludeContents(tag, options)
                         .then(result => html = html.replace(placeholder, result));
                     i++;
                 }
-                else {
-                    console.log("bug")
-                    return "here is bug";
-                }
             });
-
-        console.log("bug")
 
         return Promise.all(subtasks)
             .then(() => {
-                
+               
                 return html;
             });
     }

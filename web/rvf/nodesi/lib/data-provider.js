@@ -30,11 +30,13 @@ module.exports = function DataProvider(config) {
     }
 
     function get(src, baseOptions) {
+        console.log("Got it")
         const options = extendRequestOptions(src, baseOptions || {});
         options.gzip = true; // For backwards-compatibility, response compression is not supported by default
 
         return goodGuy.get(options)
             .then(response => {
+                console.log(response)
                 if(response.statusCode >= 400) {
                     throw new Error(response.statusCode);
                 }

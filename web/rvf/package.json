@@ -8,6 +8,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "clone": "^2.1.2",
     "express": "^4.16.1",
     "good-guy-http": "^1.12.1"
   }
