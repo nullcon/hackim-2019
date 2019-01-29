@@ -63,7 +63,7 @@ app.get('/admin',function(req,res){
 
 		var heads=req.headers[headers[check]]
 		if(heads){
-			res.send("Still in old school?")
+			res.send("Still in old school? Try harder")
 			return;
 		}
 
@@ -75,7 +75,7 @@ app.get('/admin',function(req,res){
 		 
 	}
 	else{
-		res.send("You are not a admin. you must come from "+address.split(":")[3])
+		res.send("You are not a admin. Request should come from localhost."
 	}
 
 });
