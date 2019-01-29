@@ -75,7 +75,7 @@ app.get('/admin',function(req,res){
 		 
 	}
 	else{
-		res.send("You are not a admin. Request should come from localhost."
+		res.send("You are not a admin. Request should come from localhost.")
 	}
 
 });
