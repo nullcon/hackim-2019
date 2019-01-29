@@ -1,5 +1,6 @@
 from hashlib import md5
 from binascii import hexlify, unhexlify
+from secret import key, flag
 BLOCK_LENGTH = 16
 KEY_LENGTH = 3
 ROUND_COUNT = 16
@@ -56,3 +57,6 @@ def toofun(key, pt):
     ct2 = fun(key2, ct1)
 
     return ct2
+
+print("16 bit plaintext: %s" % toofun(key, b"16 bit plaintext"))
+print("flag: %s" % toofun(key, flag))
