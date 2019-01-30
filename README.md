@@ -33,6 +33,7 @@ Also add your contact details when you get push access
 |web1.ctf.nullcon.net   |159.65.158.100 |root       |
 |web2.ctf.nullcon.net   |139.59.94.165  |root       |
 |web3.ctf.nullcon.net   |139.59.41.56   |root       |
+|web4.ctf.nullcon.net   |139.59.0.66    |root       |
 
 + User : `sudhakar`
 + password : shared on telegram
