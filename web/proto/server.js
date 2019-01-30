@@ -76,8 +76,11 @@ app.get('/getPost',(req,res) => {
     if(id.match("'")){
       if(id.match("--")){
         res.send("Follow The White Rabbit!")
+        return
       }
-      res.send("Query failed with error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1")
+   
+       res.send("Query failed with error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1")
+      return
     }
 
     if (id.match(/^[0-9a-fA-F]{24}$/)) {
@@ -88,15 +91,18 @@ app.get('/getPost',(req,res) => {
       console.log(adventure)
       if(adventure){
        res.send(adventure.post);
+       return
         }   
       else{
        res.json({"error":"Not found"});
+       return
       }
      })
     }
 
     else{
       res.json({"error":"Not found"});
+      return
     }
 
 
@@ -107,9 +113,9 @@ app.get('/getPost',(req,res) => {
 });
 
 
-app.use('/a94b5f1371229440d01f9de77e667b2d/', express.static(path.join(__dirname, 'a94b5f1371229440d01f9de77e667b2dviews')))
+app.use('/4f34685f64ec9b82ea014bda3274b0df/', express.static(path.join(__dirname, '4f34685f64ec9b82ea014bda3274b0dfviews')))
 
-app.post('/a94b5f1371229440d01f9de77e667b2d/signup', (req, res) => {
+app.post('/4f34685f64ec9b82ea014bda3274b0df/signup', (req, res) => {
   var body = JSON.parse(JSON.stringify(req.body));
   var copybody = clone(body)
   if(copybody.name){
@@ -120,7 +126,7 @@ app.post('/a94b5f1371229440d01f9de77e667b2d/signup', (req, res) => {
   }
 });
 
-app.get('/a94b5f1371229440d01f9de77e667b2d/getFlag', (req, res) => {
+app.get('/4f34685f64ec9b82ea014bda3274b0df/getFlag', (req, res) => {
 
 
     var аdmin=JSON.parse(JSON.stringify(req.cookies))
