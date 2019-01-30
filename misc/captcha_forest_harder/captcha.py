@@ -4,6 +4,14 @@ import os
 import random, time
 from PIL import Image
 
+def disable_stdout_buffering():
+    import gc
+    gc.garbage.append(sys.stdout)
+    sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)
+
+disable_stdout_buffering()
+
+
 random.seed(int(time.time())+1000)
 def cap_gen():
 	img = []
