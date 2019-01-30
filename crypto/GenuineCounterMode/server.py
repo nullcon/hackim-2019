@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from Crypto.Cipher import AES
 from Crypto.Util import Counter
 from Crypto import Random
@@ -8,7 +9,7 @@ from binascii import hexlify
 
 H = AES.new(key, AES.MODE_ECB).encrypt(bytes(16))
 sessionid = b''
-n = 2**129 - 1
+n = 327989969870981036659934487747327553919
 
 
 def group(a, length=16):
@@ -24,7 +25,7 @@ def GHASH(ciphertext, nonce):
     blocks = group(ciphertext)
     tag = bytes_to_long(c)
     for i, b in enumerate(blocks):
-        tag += (bytes_to_long(b) * pow(bytes_to_long(H), i, n)) % n
+        tag += (bytes_to_long(b) * pow(bytes_to_long(H), i + 1, n)) % n
     return long_to_bytes(tag)
 
 
@@ -87,7 +88,6 @@ def main():
 
         if choice == '3':
             break
-
 
 if __name__ == '__main__':
     main()
