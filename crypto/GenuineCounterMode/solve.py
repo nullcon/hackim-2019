@@ -2,7 +2,8 @@ import pwn as p
 from Crypto.Random import get_random_bytes
 from base64 import b64encode
 from Crypto.Util.number import *
-r = p.process("server.py")
+# r = p.process("server.py")
+r = p.remote("crypto.ctf.nullcon.net", 5000)
 
 
 def set_username(username):
