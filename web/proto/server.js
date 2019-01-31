@@ -8,8 +8,7 @@ const mongoose = require('mongoose');
   var url="mongodb://db:22678/challenge"
 
   var schema = new mongoose.Schema({ name: 'string', post: 'string' });
-   var MyModel = mongoose.model('Posts', schema);
-
+   var MyModel = mongoose.model('posts', schema);
 
 
 
@@ -88,6 +87,7 @@ app.get('/getPost',(req,res) => {
       var payload={_id:id}
       console.log(payload)
       MyModel.findById(payload,function (err, adventure) {
+        console.log(err)
       console.log(adventure)
       if(adventure){
        res.send(adventure.post);
