@@ -1,5 +1,8 @@
-# c0mpute
+# Compute
+
 Flag: `nv1d14_d03S_1t_8etteR`
+
+Description: `Can you float like a butterfly? Sting like a bee...`
 
 OpenCL re chal
 

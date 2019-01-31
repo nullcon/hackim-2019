@@ -1,4 +1,8 @@
+# Reveal
+
 Flag: `wh3N1TsD4rk0ut`
+
+Description: `qemu is for n00bs. Ours is the real deal!`
 
 Reverse the switch cases to figure out which opcode in `chal.o.1` and `chal.o.2` corresponds to which case of the decoder. Each opcode is 32 bits in size. Each instruction contains contains 1 byte which corresponds to a switch case and 2 bytes which correspond to 2 operands.
 
