@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
   var url="mongodb://db:22678/challenge"
 
   var schema = new mongoose.Schema({ name: 'string', post: 'string' });
-   var MyModel = mongoose.model('posts', schema);
+   var MyModel = mongoose.model('Posts', schema);
 
 
 
@@ -67,7 +67,7 @@ app.get('/getPost',(req,res) => {
 
   if(!req.query.id){
 
-    res.json({"error":"id is missing (ex: /getPOST?id=5c46e90eeaca9e86b7fc047a)"});
+    res.json({"error":"id is missing (ex: /getPOST?id=5c51b9c9144f813f31a4c0e2)"});
   }
   else{
 
