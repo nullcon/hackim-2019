@@ -5,8 +5,6 @@ services:
     build: ./mongo
     volumes:
       - /data/db
-    ports:
-      - "27017:27017"
   proto:
     container_name: proto
     restart: always
