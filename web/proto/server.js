@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const mongoose = require('mongoose');
-  var url="mongodb://db/challenge"
+  var url="mongodb://db:22678/challenge"
 
   var schema = new mongoose.Schema({ name: 'string', post: 'string' });
    var MyModel = mongoose.model('posts', schema);
