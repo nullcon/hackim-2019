@@ -1,4 +1,0 @@
-# Nmap 7.01 scan initiated Thu Jan 31 09:16:07 2019 as: nmap -T3 -sV -sC -Pn -n -p- -oA web-host-2 web2.ctf.nullcon.net
-Host: 127.0.1.1 ()	Status: Up
-Host: 127.0.1.1 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0)/, 4545/open/tcp//http//Node.js (Express middleware)/, 27017/open/tcp//mongodb//MongoDB 4.0.5 4.0.5/	Ignored State: closed (65532)
-# Nmap done at Thu Jan 31 09:16:26 2019 -- 1 IP address (1 host up) scanned in 18.95 seconds
