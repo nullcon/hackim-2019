@@ -2,6 +2,8 @@
 
 Flag: `w3Lc0m3_t0_tH3_8L4cK_p4R4D3`
 
+Description: `Marty, we have to go back`
+
 A simple re challenge written in OCaml.
 
 This program just prints each character of the flag one by one. There are large delays between each successive print. The player has to figure out a way to print out the flag in a reasonable amount of time.

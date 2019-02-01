@@ -35,7 +35,7 @@ Also add your contact details when you get push access
 |web3.ctf.nullcon.net   |139.59.41.56   |root       |
 |web4.ctf.nullcon.net   |139.59.0.66    |root       |
 |misc.ctf.nullcon.net   |68.183.86.42   |root       |
-|crypto.ctf.nullcon.net   |68.183.86.42   |root       |
+|crypto.ctf.nullcon.net |68.183.86.42   |root       |
 
 + User : `sudhakar`
 + password : shared on telegram

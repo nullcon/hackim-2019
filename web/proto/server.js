@@ -74,7 +74,7 @@ app.get('/getPost',(req,res) => {
 
     if(id.match("'")){
       if(id.match("--")){
-        res.send("Follow The White Rabbit!")
+        res.send("Wake up Neo... Follow The White Rabbit!")
         return
       }
    
