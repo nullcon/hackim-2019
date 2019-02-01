@@ -16,6 +16,7 @@ app.get('/run',function(req,res){
 		console.log(untrusted)
 		if(untrusted){
 		  try{
+  			if(untrusted.toString().includes("while")){ res.send("nice try"); return}
 		 	run = new VM().run(untrusted)
 		 	
 			//console.log(run.toString());
